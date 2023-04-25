@@ -1,3 +1,8 @@
+html { font-size: calc(0.625rem + 0.41666666666666663vw); }
+  @media screen and (max-width:1920px) { html { font-size: calc(0.625rem + 0.41666666666666674vw); } }
+  @media screen and (max-width:1440px) { html { font-size: calc(0.8126951092611863rem + 0.20811654526534862vw); } }
+  @media screen and (max-width:479px) { html { font-size: calc(0.7494769874476988rem + 0.8368200836820083vw); } }
+
 html {
     height: 100%;
     width: 100%;
@@ -27,3 +32,87 @@ html {
     overflow: hidden;
   }
   
+
+  /*lenis -- IMPORTANT*/
+	html {
+        scroll-behavior: initial;
+      }
+      html, body {
+        width: 100%;
+          height: auto !important;
+        min-height: 100%;
+      }
+  
+  /*selection*/
+    ::selection {
+        background: #E8E8E8;
+      color: #121212; 
+      text-shadow: none;
+      }
+    
+  /*greyscale webflow badge*/
+    .w-webflow-badge {
+        filter: grayscale(100%);
+      }
+  
+    .split-text{
+    overflow: hidden !important;
+    }
+    .line-animation{
+    overflow: hidden !important;
+    }
+    
+    
+  [js-line-animation] {
+      visibility: hidden;
+  }
+  
+  .w--editor [js-line-animation] {
+      visibility: visible;
+  }
+  
+  [js-line-animation] .line {
+      overflow: hidden;
+  }
+
+  /* Animate Line */
+:root {
+    --animate-line-color: #F5EEE4;
+    --animate-line-speed: 0.5s;
+    --animate-line-ease: cubic-bezier(0.12, 0, 0.39, 0);
+  }
+  .animate-line {
+      display: inline-block;
+    position: relative;
+    overflow-x: hidden;
+  }
+  .animate-line::after {
+      pointer-events: none;
+      background-color: var(--animate-line-color);
+    content: "";
+    height: 3px;
+    position: absolute;
+    left: auto;
+    top: auto;
+    right: 0%;
+    bottom: 0%;
+    width: 0%;
+    transition: width var(--animate-line-ease) var(--animate-line-speed);
+  }
+  .animate-line:hover::after {
+      width: 100%;
+    right: auto;
+    left: 0%;
+  }
+  
+  .letter-space{
+  text-align: justify !important;
+  }
+  
+  .loader{
+  display: flex !important;
+  }
+  
+  .main-navigation{
+  touch-action: manipulation;
+  }
