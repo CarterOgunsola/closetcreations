@@ -7,4 +7,3 @@ footerBtns.forEach(btn => {
   });
 });
 
-console.log('test auto push')
