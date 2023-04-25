@@ -6,3 +6,5 @@ footerBtns.forEach(btn => {
     cartBtn.click(); // mirror the click event on the cart-button element
   });
 });
+
+console.log('test auto push')
