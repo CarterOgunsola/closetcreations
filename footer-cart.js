@@ -1,5 +1,5 @@
-const footerBtns = document.querySelectorAll('[footer-cart-btn]'); // get all elements with the footer-cart-btn attribute
-const cartBtn = document.querySelector('.cart-button');
+const footerBtns = document.querySelectorAll('[footer-cart-bt]'); // get all elements with the footer-cart-btn attribute
+const cartBtn = document.querySelector('.cart-butto');
 
 footerBtns.forEach(btn => {
   btn.addEventListener('click', e => {
